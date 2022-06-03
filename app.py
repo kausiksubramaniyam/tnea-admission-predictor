@@ -2,7 +2,7 @@ from flask import Flask,render_template,request,redirect,url_for
 from main import predict_cutoff
 app = Flask(__name__)
 
-@app.route('/',methods=['GET','POST'])
+@app.route('/',methods=['POST','GET'])
 def home():
    return render_template("college.html")
 
