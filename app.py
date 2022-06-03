@@ -9,7 +9,7 @@ def home():
 
 @app.route('/predicts',methods = ['POST', 'GET'])
 def predicts_cutoff():
-   college = request.form['country']
+   college = request.form['college']
    course = request.form['course']
    community = request.form['community']
    a=[college,course,community]
