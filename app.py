@@ -4,10 +4,13 @@ app = Flask(__name__)
 
 @app.route('/',methods=['POST','GET'])
 def home():
+   return render_template("mini.html")
+
+@app.route('/choose',methods=['POST','GET'])
+def college():
    return render_template("college.html")
 
-
-@app.route('/predicts',methods = ['POST', 'GET'])
+@app.route('/predicts',methods = ['POST','GET'])
 def predicts_cutoff():
    college = request.form['college']
    course = request.form['course']
@@ -20,4 +23,4 @@ def predicts_cutoff():
       return "Unable to find module."
 
 if __name__ == '__main__':
-   app.run(host="0.0.0.0",debug = False)
+   app.run(host="0.0.0.0",debug = True)
