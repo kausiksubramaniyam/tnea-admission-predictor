@@ -18,7 +18,7 @@ def predicts_cutoff():
    a=[college,course,community]
    try:
       cutoff=predict_cutoff(a)
-      return render_template("cutoff.html",cutoff=cutoff[0])
+      return render_template("cutoff.html",cutoff=cutoff[0]-2)
    except ModuleNotFoundError:
       return "Unable to find module."
 
